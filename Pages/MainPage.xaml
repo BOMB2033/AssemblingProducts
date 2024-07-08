@@ -1,0 +1,23 @@
+﻿<Page x:Class="AssemblingProducts.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AssemblingProducts.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="150">
+            <TextBlock Margin="5" >Логин</TextBlock>
+            <TextBox Margin="5"  x:Name="textBoxLogin"/>
+            <TextBlock Margin="5" >Пароль</TextBlock>
+            <PasswordBox Margin="5"  x:Name="textBoxPassword"/>
+            <TextBlock Margin="5" >Ссылка</TextBlock>
+            <TextBox Margin="5"  x:Name="textBoxLonk"/>
+
+            <Button x:Name="btnStartParse" Content="Начать парсить" Margin="5" Height="50" Width="200" Click="btnStartParse_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
