@@ -1,5 +1,6 @@
 ﻿using Microsoft.Office.Interop.Excel;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,11 @@ namespace AssemblingProducts.Pages
         }
         public void DownloadFile(string path)
         {
-            WebDriver driver = new EdgeDriver();
+            WebDriver driver;
+            if (radioButtonEdge.IsChecked == false)
+                driver = new ChromeDriver();
+            else
+                driver = new EdgeDriver();
             driver.Navigate().GoToUrl(path);
             driver.FindElement(By.Name("j_username")).SendKeys(textBoxLogin.Text);
             driver.FindElement(By.Name("j_password")).SendKeys(textBoxPassword.Password);

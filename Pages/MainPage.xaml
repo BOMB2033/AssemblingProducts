@@ -9,6 +9,10 @@
       Title="MainPage">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="150">
             <TextBlock Margin="5" >Логин</TextBlock>
             <TextBox Margin="5"  x:Name="textBoxLogin"/>
@@ -18,6 +22,10 @@
             <TextBox Margin="5"  x:Name="textBoxLonk"/>
 
             <Button x:Name="btnStartParse" Content="Начать парсить" Margin="5" Height="50" Width="200" Click="btnStartParse_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <RadioButton x:Name="radioButtonEdge" Content="Edge" Margin="10" IsChecked="False"/>
+            <RadioButton Content="Chrome" Margin="10" IsChecked="True"/>
         </StackPanel>
     </Grid>
 </Page>
